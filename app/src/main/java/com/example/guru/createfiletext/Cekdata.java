@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import static com.example.guru.createfiletext.DataDomain.DOMAIN_SAYA;
+
 public class Cekdata extends AppCompatActivity {
 
     @Override
@@ -38,10 +40,12 @@ public class Cekdata extends AppCompatActivity {
             //You'll need to add proper error handling here
         }
 
+        DOMAIN_SAYA=text.toString();
+
 //Find the view by its id
         TextView tv = (TextView)findViewById(R.id.txtdata);
 
 //Set the text
-        tv.setText(text.toString());
+        tv.setText(DOMAIN_SAYA);
     }
 }
